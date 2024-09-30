@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Ch_1_dist_JoseLastra.knit</title>
+    <meta charset="utf-8" />
+    <script src="Ch_1_dist_JoseLastra_files/header-attrs/header-attrs.js"></script>
+    <link href="Ch_1_dist_JoseLastra_files/htmltools-fill/fill.css" rel="stylesheet" />
+    <script src="Ch_1_dist_JoseLastra_files/htmlwidgets/htmlwidgets.js"></script>
+    <script src="Ch_1_dist_JoseLastra_files/jquery/jquery-3.6.0.min.js"></script>
+    <link href="Ch_1_dist_JoseLastra_files/leaflet/leaflet.css" rel="stylesheet" />
+    <script src="Ch_1_dist_JoseLastra_files/leaflet/leaflet.js"></script>
+    <link href="Ch_1_dist_JoseLastra_files/leafletfix/leafletfix.css" rel="stylesheet" />
+    <script src="Ch_1_dist_JoseLastra_files/proj4/proj4.min.js"></script>
+    <script src="Ch_1_dist_JoseLastra_files/Proj4Leaflet/proj4leaflet.js"></script>
+    <link href="Ch_1_dist_JoseLastra_files/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="Ch_1_dist_JoseLastra_files/leaflet-binding/leaflet.js"></script>
+    <script src="Ch_1_dist_JoseLastra_files/leaflet-providers/leaflet-providers_2.0.0.js"></script>
+    <script src="Ch_1_dist_JoseLastra_files/leaflet-providers-plugin/leaflet-providers-plugin.js"></script>
+    <script src="Ch_1_dist_JoseLastra_files/pymjs/pym.v1.js"></script>
+    <script src="Ch_1_dist_JoseLastra_files/widgetframe-binding/widgetframe.js"></script>
+    <script src="Ch_1_dist_JoseLastra_files/viz/viz.js"></script>
+    <link href="Ch_1_dist_JoseLastra_files/DiagrammeR-styles/styles.css" rel="stylesheet" />
+    <script src="Ch_1_dist_JoseLastra_files/grViz-binding/grViz.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: inverse,left, middle
+background-image: url(background-1.png)
+background-size: contain
+
+
+
+
+
+
+---
+## Central-South Chile
+
+
+.pull-left[
+- Extension 30°S - 43°S
+- High endemism region and biodiversity hotspot (Myers et al., 2000; Urrutia-Jalabert et al., 2018; Henríquez, 2019)
+- More frequent and intense disturbance events (fires, droughts, antrophogenic pressures, etc.)
+- Recent hyper-drought affected ~90% of natural vegetation with a strong decrease in productivity (Chavez et al., 2020; Miranda et al., 2023)
+]
+
+.pull-right[
+&lt;center&gt;&lt;img src="HD_2019.png" alt="GithHub Octocat" height="525px" /&gt;&lt;/center&gt;
+]
+
+
+---
+## Phenological assesment
+
+- Several temporal behaviors, densities, structures and changes.
+
+.left-column[
+
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-68af374ace1e7cef58ae" style="width:99%;height:450px;"></div>
+<script type="application/json" data-for="htmlwidget-68af374ace1e7cef58ae">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["GeoportailFrance.orthos",null,"GeoportailFrance",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addProviderTiles","args":["Esri.WorldImagery",null,"Esri Imagery",{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addPolygons","args":[[[[{"lng":[-69.6031708178224,-69.75599862088448,-74.95099881164379,-73.89115745932281,-69.6031708178224],"lat":[-29.38095118882781,-42.64142677431926,-42.48911103567971,-29.29257904952701,-29.38095118882781]}]]],null,"limits",{"interactive":true,"className":"","stroke":true,"color":"white","weight":5,"opacity":0.5,"fill":true,"fillColor":"white","fillOpacity":0,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addCircles","args":[[-32.97966079345257,-32.98681234084818],[-71.03728711173116,-71.0133753442804],15,null,"Sample ts",{"interactive":true,"className":"","stroke":true,"color":"red","weight":5,"opacity":0.5,"fill":true,"fillColor":"red","fillOpacity":0.2},null,null,["MATORRAL ARBORESCENTE SEMIDENSO","BOSQUE NATIVO RENOVAL DENSO"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null,null]},{"method":"addLayersControl","args":[["Esri Imagery","GeoportailFrance"],["limits","Sample ts"],{"collapsed":true,"autoZIndex":true,"position":"topright"}]}],"fitBounds":[-42.64142677431926,-74.95099881164379,-29.29257904952701,-69.6031708178224,[]],"limits":{"lat":[-42.64142677431926,-29.29257904952701],"lng":[-74.95099881164379,-69.6031708178224]}},"evals":[],"jsHooks":[]}</script>
+
+]
+
+.right-column[
+<div id="htmlwidget-7c0d3064e524a1cdba6d" style="width:99%;height:95%;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7c0d3064e524a1cdba6d">{"x":{"url":"Ch_1_dist_JoseLastra_files/figure-html//widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+]
+---
+## Phenological assesment
+
+--
+- Traditional approaches do not work properly in every scenario (Broich et al., 2015; White et al., 2009)
+- This produces not reliable metrics or no metrics at all.
+
+&lt;center&gt;&lt;img src="px_5_phenofit.png" alt="GithHub Octocat" height="200px" /&gt;&lt;/center&gt;
+&lt;center&gt;&lt;img src="px_7_phenofit.png" alt="GithHub Octocat" height="200px" /&gt;&lt;/center&gt;
+
+---
+## Issues
+
+--
+- Lack of seasonal behavior, noisy signals among others affect the quality of smoothed signals.
+- Disturbances such as fires, drought and land cover changes. 
+
+&lt;center&gt;&lt;img src="series_examples.png" alt="GithHub Octocat" height="400px" /&gt;&lt;/center&gt;
+
+
+---
+## Approach
+
+.left-column[
+- Detect seasonality: Amplitudes per year
+- Austral summer peak: November, December, January and February
+- Dynamic GS and curve adaptation
+
+]
+
+.right-column[
+<div class="grViz html-widget html-fill-item" id="htmlwidget-ea2d2617ac6ee54dc467" style="width:99%;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-ea2d2617ac6ee54dc467">{"x":{"diagram":"digraph {\n\ngraph [layout = dot,ontname = \"helvetica\",  nodesep=0.1, overlap=\"prism1000\", rankdir = TB]\n\n# define the global styles of the nodes. We can override these in box if we wish\n\nnode [shape = cylinder, style = filled, fillcolor = LightBlue]\nmodis [label = \"M*D13Q1 \n VI 250 m [Didan, 2021]\"]\nlandsat [label = \"Landsat Surface Reflectance \n Collection 2 VI 30 m [USGS]\"]\ncr2 [label = \"CR2MET Temperature and Precipitation \n v2.5 0.05 degrees [Boisier, 2023]\"]\nphenChile [label = \"PhenChile monitoring network \n GCC data v1.0 [Chávez et al., 2024]\"]\n\nnode [shape = rectangle, style = filled, fillcolor = Linen]\nprocess1 [label =  \"Quality assesment \n Cleaning low quality data (clouds, cloud, shadows, artifacts)\"]\nprocess2 [label = \"Time series gap-filling\"]\nprocess3 [label = \"Growing season identification\"]\ndecision1 [label =  \"Austral summer peak?\", shape = diamond, fillcolor = Tomato]\nyes1 [label = \"Yes\", shape = circle]\nno1 [label = \"No\", shape = circle]\n\ndecision2 [label =  \"Has seasonality?\", shape = diamond, fillcolor = Tomato]\nyes2 [label = \"Yes\", shape = circle]\nno2 [label = \"No\", shape = circle]\nprocess4a [label = \"GS: January 1st - December 31st\"]\nprocess4b [label = \"GS: july 1st - June 30th\"]\nprocess4c [label = \"Model fit \n Beck logistics (Beck et al., 2006) | Elmore logistics (Elmore et al., 2012)\"]\n\nprocess5 [label = \"Phenometrics extraction \n Threshold and Derivative methods\"]\nprocess6 [label = \"Metrics validation\"]\nprocess7 [label = \"Climatic analysis\"]\nresultado1 [label= \"LSP maps\"]\n\n# npphen processing\nnode [shape = rectangle, style = filled, fillcolor = Linen]\n\nprocess8 [label = \"Temporal KDE \n 5-year moving window\"]\nprocess9 [label = \"Extraction of most probable \n daily phenological curve\"]\nprocess10 [label = \"Dynamic growing season \n center arround max VI value\"]\n\n\n# edge definitions with the node IDs\n# conventional\n{modis landsat}  -> process1 -> process2 -> decision2 -> {yes2 no2} \nno2 -> Remove\nyes2 -> process3 -> decision1 -> {yes1 no1} \n\nno1 -> process4a \nyes1 -> process4b\n\n{process4b process4a} -> process4c -> process5 -> resultado1\nphenChile -> process6 -> {process5}\nphenChile -> process7  \ncr2 -> process7 -> resultado1\n\n# npphen approach\nprocess1 -> process8 -> process9 -> process10 -> process5\n\n# Subplots\n\nsubgraph cluster_1{\ngraph[shape = rectangle]\n         style = rounded\n         bgcolor = FloralWhite\n         label = \"Conventional analysis\"\n    \n      modis landsat process1 process2 decision2 {yes2 no2} \n      Remove\n      process3  decision1  {yes1 no1} \n      process4b process4a process4c process5 resultado1\n}\n\nsubgraph cluster_2 {\ngraph[shape = rectangle]\n         style = rounded\n         bgcolor = FloralWhite\n         label = \"Validation and climate analysis\"\n    phenChile process6 resultado1 process5 cr2 process7  \n}\n\nsubgraph cluster_3 {\ngraph[shape = rectangle]\n         style = rounded\n         bgcolor = FloralWhite\n         label = \"Climate\"\n    cr2 process7 resultado1     \n}\n\nsubgraph cluster_4 {\ngraph[shape = rectangle]\n         style = rounded\n         bgcolor = FloralWhite\n         label = \"Non-parametric analysis\"\n    process1 process8 process9 process5 resultado1    \n}\n\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+]
+
+---
+## Main questions
+
+
+---
+## Main issues until now
+
+---
+## Possible journals
+
+--- 
+## Feedback 
+
+
+
+---
+class: inverse,left, middle
+background-image: url(background.png)
+background-size: contain
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "zenburn",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
