@@ -1,0 +1,48 @@
+Reg. Coquimbo - Maule - Biobio - araucania - los lagos
+
+Bosques
+
+"USO"  =  'Bosques'
+
+NATIVO 
+Reg coquimbo
+"USO"  =  'Bosques' AND "USO_TIERRA"  IN ('Bosque Nativo Adulto Abierto','Bosque Nativo Adulto Denso','Bosque Nativo Adulto Muy Abierto','Bosque Nativo Adulto Semidenso')
+
+Reg Maule
+"USO_TIERRA" IN ('Bosque Nativo Achaparrado Abierto','Bosque Nativo Achaparrado Denso','Bosque Nativo Achaparrado Semidenso','Bosque Nativo Adulto Abierto','Bosque Nativo Adulto Denso','Bosque Nativo Adulto Semidenso','Bosque Nativo Adulto-Renoval Abierto','Bosque Nativo Adulto-Renoval Denso','Bosque Nativo Adulto-Renoval Semidenso','Bosque Nativo Renoval Abierto','Bosque Nativo Renoval Denso','Bosque Nativo Renoval Semidenso')
+
+Reg biobio
+"USO_TIERRA" IN ('Bosque Nativo Achaparrado Abierto','Bosque Nativo Achaparrado Denso','Bosque Nativo Achaparrado Semidenso','Bosque Nativo Adulto Abierto','Bosque Nativo Adulto Denso','Bosque Nativo Adulto Semidenso','Bosque Nativo Adulto-Renoval Abierto','Bosque Nativo Adulto-Renoval Denso','Bosque Nativo Adulto-Renoval Semidenso','Bosque Nativo Renoval Abierto','Bosque Nativo Renoval Denso','Bosque Nativo Renoval Semidenso')
+
+Reg Araucania
+
+"USO_TIERRA" IN ('B.Nat.Achaparrado Abierto','B.Nat.Achaparrado Denso','B.Nat.Achaparrado Semidenso','B.Nat.Adulto-Renoval Abierto','B.Nat.Adulto-Renoval Denso','B.Nat.Adulto-Renoval Semidenso','Bosque Nativo Adulto Abierto','Bosque Nativo Adulto Denso','Bosque Nativo Adulto Semidenso','Renoval Abierto','Renoval Denso','Renoval Semidenso')
+
+Reg Los lagos
+
+"USO_TIERRA" IN ('B.Nat.Achaparrado Abierto','B.Nat.Achaparrado Denso','B.Nat.Achaparrado Semidenso','B.Nat.Adulto-Renoval Abierto','B.Nat.Adulto-Renoval Denso','B.Nat.Adulto-Renoval Semidenso','Bosque Nativo Adulto Abierto','Bosque Nativo Adulto Denso','Bosque Nativo Adulto Semidenso','Renoval Abierto','Renoval Denso','Renoval Semidenso')
+
+#--------------------------------------------------------------------------------------------#
+Bosques
+Reg Valp - O'Higgins - Metropolitana 
+"USO" = 'BOSQUE'
+
+NATIVO
+
+Reg. Valpo
+"USO_TIERRA" IN ('BOSQUE NATIVO ACHAPARRADO MUY ABIERTO','BOSQUE NATIVO ADULTO ABIERTO','BOSQUE NATIVO ADULTO DENSO','BOSQUE NATIVO ADULTO MUY ABIERTO', 'BOSQUE NATIVO ADULTO RENOVAL ABIERTO','BOSQUE NATIVO ADULTO SEMIDENSO','BOSQUE NATIVO RENOVAL ABIERTO','BOSQUE NATIVO RENOVAL DENSO','BOSQUE NATIVO RENOVAL MUY ABIERTO','BOSQUE NATIVO RENOVAL SEMIDENSO')
+
+Reg Metropolitana
+"USO_TIERRA" IN ('BOSQUE NATIVO ADULTO DENSO','BOSQUE NATIVO ADULTO RENOVAL ABIERTO','BOSQUE NATIVO ADULTO RENOVAL DENSO','BOSQUE NATIVO ADULTO RENOVAL MUY ABIERTO','BOSQUE NATIVO ADULTO RENOVAL SEMIDENSO','BOSQUE NATIVO RENOVAL ABIERTO','BOSQUE NATIVO RENOVAL DENSO','BOSQUE NATIVO RENOVAL MUY ABIERTO','BOSQUE NATIVO RENOVAL SEMIDENSO')
+
+Reg O'Higgins
+"USO_TIERRA" IN ('BOSQUE NATIVO ACHAPARRADO ABIERTO','BOSQUE NATIVO ACHAPARRADO SEMIDENSO','BOSQUE NATIVO ADULTO ABIERTO','BOSQUE NATIVO ADULTO DENSO','BOSQUE NATIVO ADULTO MUY ABIERTO','BOSQUE NATIVO ADULTO RENOVAL ABIERTO','BOSQUE NATIVO ADULTO RENOVAL DENSO','BOSQUE NATIVO ADULTO RENOVAL MUY ABIERTO','BOSQUE NATIVO ADULTO RENOVAL SEMIDENSO','BOSQUE NATIVO ADULTO SEMIDENSO','BOSQUE NATIVO RENOVAL ABIERTO','BOSQUE NATIVO RENOVAL DENSO','BOSQUE NATIVO RENOVAL MUY ABIERTO','BOSQUE NATIVO RENOVAL SEMIDENSO')
+
+#--------------------------------------------------------------------------------------------#
+Bosques
+Los rios
+"Uso" = 'Bosques'
+
+Nativo
+
+"Uso_tierra" IN ('Bosque Nativo Achaparrado Abierto','Bosque Nativo Achaparrado Denso','Bosque Nativo Achaparrado Semidenso','Bosque Nativo Adulto Abierto','Bosque Nativo Adulto Denso','Bosque Nativo Adulto Semidenso','Bosque Nativo Adulto-Renoval Abierto','Bosque Nativo Adulto-Renoval Denso','Bosque Nativo Adulto-Renoval Semidenso','Renoval Abierto','Renoval Denso','Renoval Muy Abierto','Renoval Semidenso')
