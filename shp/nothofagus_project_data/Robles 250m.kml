@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="Robles_250m" id="Robles_250m">
+	<SimpleField name="DN" type="int"></SimpleField>
+</Schema>
+<Folder><name>Robles_250m</name>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Robles_250m">
+		<SimpleData name="DN">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-71.046908789,-33.916130399 -71.044663003,-33.916130399 -71.044663003,-33.918376185 -71.046908789,-33.918376185 -71.046908789,-33.916130399</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Robles_250m">
+		<SimpleData name="DN">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><Polygon><outerBoundaryIs><LinearRing><coordinates>-71.053646147,-33.918376185 -71.049154575,-33.918376185 -71.049154575,-33.922867757 -71.051400361,-33.922867757 -71.051400361,-33.920621971 -71.053646147,-33.920621971 -71.053646147,-33.918376185</coordinates></LinearRing></outerBoundaryIs></Polygon></MultiGeometry>
+  </Placemark>
+</Folder>
+</Document></kml>
