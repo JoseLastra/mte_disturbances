@@ -1,0 +1,3 @@
+rem		Download full ARD datasets
+
+perl C:/GLAD_Tools/download_ARD.pl tiles.txt 392 1012 C:/GLAD_Workspace/ARD
