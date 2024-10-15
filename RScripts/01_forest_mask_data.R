@@ -41,5 +41,7 @@ escl_binded <- escl %>% lapply(FUN =
                             st_transform(32719)
                         }) %>% bind_rows()
 
-escl_binded %>% group_by(CODREG) %>% 
-  summarise(total = sum(area_sqkm, na.rm = T), do_union = F)
+escl_binded %>% group_by(CODREG) %>%
+  st_drop_geometry() %>% 
+  summarise(total = sum(area_sqkm, na.rm = T)) %>% view()
+
