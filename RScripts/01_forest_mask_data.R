@@ -41,7 +41,63 @@ escl_binded <- escl %>% lapply(FUN =
                             st_transform(32719)
                         }) %>% bind_rows()
 
-escl_binded %>% group_by(CODREG) %>%
-  st_drop_geometry() %>% 
-  summarise(total = sum(area_sqkm, na.rm = T)) %>% view()
 
+
+sorted <- c('04','05', '13', '06', '07', '16', '08', '09', '14', '10')
+
+tot_region_escl <- escl_binded %>% group_by(CODREG) %>%
+  st_drop_geometry() %>% 
+  summarise(total = round(sum(area_sqkm, na.rm = T),2)) %>% 
+  mutate(CODREG = ifelse(is.na(CODREG), '08', CODREG),sort = fct_relevel(CODREG, sorted), type = 'Evergreen')
+
+### nothofagus ----
+roble <- roble %>% lapply(FUN = 
+                          function(x){
+                            x %>% mutate(area_sqkm = as.numeric(st_area(.)/1000000)) %>% 
+                              filter(area_sqkm > 0.0009)
+                          })
+#common_cols <- Reduce(intersect, lapply(escl, colnames))
+nombres <- c('CODREG', 'USO', 'area_sqkm')
+roble_binded <- roble %>% lapply(FUN = 
+                                 function(x){
+                                   x %>% select(all_of(nombres)) %>% 
+                                     st_transform(32719)
+                                 }) %>% bind_rows()
+
+sorted <- c('05', '13', '06', '07')
+
+tot_region_roble <- roble_binded %>% group_by(CODREG) %>%
+  st_drop_geometry() %>% 
+  summarise(total = round(sum(area_sqkm, na.rm = T),2)) %>% 
+  mutate(CODREG = ifelse(is.na(CODREG), '08', CODREG),sort = fct_relevel(CODREG, sorted), type = 'Deciduos')
+
+## Mergede dataset -----
+sorted_full <- c('04','05', '13', '06', '07', '16', '08', '09', '14', '10') %>% rev()
+
+forest_total <- tot_region_escl %>% bind_rows(tot_region_roble) %>% 
+  mutate(sort = fct_relevel(sort, sorted_full))
+
+labels <- c('Coquimbo', 'Valparaiso', 'Metropolitana', "O'Higgins", 'Maule', 'Ñuble', 'Biobio', 'Araucania', 'Los Ríos', 'Los Lagos') %>% rev()
+
+a <- forest_total %>% ggplot(aes(x = sort, y = total, fill = type)) +
+  geom_bar(stat = 'identity', position = 'dodge') +
+  scale_fill_manual(values = c('#de5a25', '#279e16')) +
+  labs(x = '', 
+       y = expression(
+         paste('Total Forest [', km^{2}, ']')
+       ),
+       fill = 'Forest type'
+  ) +
+  scale_y_continuous(n.breaks = 11) +
+  scale_x_discrete(labels = labels) + 
+  theme_minimal() +
+  theme(axis.text.x = element_text(face = 'bold', colour = 'white', size = 12),
+        axis.text.y = element_text(face = 'bold', colour = 'white', size = 12), 
+        legend.text = element_text(face = 'bold', colour = 'white', size = 12),
+        legend.title = element_text(face = 'bold', colour = 'white', size = 14),
+        axis.title.x = element_text(face = 'bold', colour = 'white', size = 12)) +
+  coord_flip() 
+
+a
+
+ggsave(a, filename = 'plots/total_forest_area_regions.png', units = 'in', width = 8, height = 10, dpi = 120, bg = 'transparent')
