@@ -31,7 +31,7 @@ roble <- roble_ls %>% lapply(read_sf)
 escl <- escl %>% lapply(FUN = 
                           function(x){
                             x %>% mutate(area_sqkm = as.numeric(st_area(.)/1000000)) %>% 
-                              filter(area_sqkm > 0.0009)
+                              filter(area_sqkm > 0.0027)
                           })
 #common_cols <- Reduce(intersect, lapply(escl, colnames))
 nombres <- c('CODREG', 'USO', 'area_sqkm')
@@ -54,7 +54,7 @@ tot_region_escl <- escl_binded %>% group_by(CODREG) %>%
 roble <- roble %>% lapply(FUN = 
                           function(x){
                             x %>% mutate(area_sqkm = as.numeric(st_area(.)/1000000)) %>% 
-                              filter(area_sqkm > 0.0009)
+                              filter(area_sqkm > 0.0027)
                           })
 #common_cols <- Reduce(intersect, lapply(escl, colnames))
 nombres <- c('CODREG', 'USO', 'area_sqkm')
@@ -71,11 +71,23 @@ tot_region_roble <- roble_binded %>% group_by(CODREG) %>%
   summarise(total = round(sum(area_sqkm, na.rm = T),2)) %>% 
   mutate(CODREG = ifelse(is.na(CODREG), '08', CODREG),sort = fct_relevel(CODREG, sorted), type = 'Deciduos')
 
-## Mergede dataset -----
+## Merged dataset -----
+### GPKG data ------
+roble_binded <- roble_binded %>% mutate(type = 'Deciduous')
+escl_binded <- escl_binded %>% mutate(type = 'Evergreen')
+
+total_forest <- roble_binded %>% bind_rows(escl_binded)
+write_sf(total_forest, dsn = 'shp/total_forest_CONAF.gpkg')
+
+ggplot() + geom_sf(data = total_forest, aes(fill = type))
+### Tabular data -----
+
 sorted_full <- c('04','05', '13', '06', '07', '16', '08', '09', '14', '10') %>% rev()
 
 forest_total <- tot_region_escl %>% bind_rows(tot_region_roble) %>% 
   mutate(sort = fct_relevel(sort, sorted_full))
+
+write.csv(forest_total, file = 'tables/forest_totals_per_reg.csv')
 
 labels <- c('Coquimbo', 'Valparaiso', 'Metropolitana', "O'Higgins", 'Maule', 'Ñuble', 'Biobio', 'Araucania', 'Los Ríos', 'Los Lagos') %>% rev()
 
