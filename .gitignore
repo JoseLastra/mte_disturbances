@@ -40,4 +40,5 @@ esclerofilo_consolidado_20241007.gpkg
 
 01_Landsat_ARD/
 total_forest_CONAF.gpkg
+total_forest_CONAF_dpa_filtered.gpkg
 
