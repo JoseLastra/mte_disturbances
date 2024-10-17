@@ -79,7 +79,14 @@ escl_binded <- escl_binded %>% mutate(type = 'Evergreen')
 total_forest <- roble_binded %>% bind_rows(escl_binded)
 write_sf(total_forest, dsn = 'shp/total_forest_CONAF.gpkg')
 
-ggplot() + geom_sf(data = total_forest, aes(fill = type))
+### DPA filtering ----
+total_forest <- read_sf('shp/total_forest_CONAF.gpkg')
+dpa_forest <- total_forest %>% filter(CODREG %in% c('05', '06', '07', '13'))
+total_area_dpa <- dpa_forest %>% 
+  st_drop_geometry %>% 
+  group_by(type) %>% 
+  summarise(total_sqkm = sum(area_sqkm, na.rm = T))
+
 ### Tabular data -----
 
 sorted_full <- c('04','05', '13', '06', '07', '16', '08', '09', '14', '10') %>% rev()
